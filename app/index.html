@@ -26,21 +26,34 @@
         <!-- endbuild -->
     </head>
     <body>
-    <div class="" style="margin-top:50px; width: 100%">
+      <h1>Visualization of <code>Math.random()</code> uses</h1>
+      <p>
+      Manipulating random numbers with other random numbers is not a good idea because their distribution will no longer be uniform.
+      </p>
+      <div class="" style="margin-top:50px; width: 100%">
+        <!-- yes, a TABLE element, sue me -->
+        <table width="100%">
+          <tr>
+            <td>
       <div class="chart" id="chart01"> </div>
       <code>
 Math.random()
       </code>
-      <hr />
+            </td>
+            <td>
       <div class="chart" id="chart02"> </div>
       <code>
 Math.random() + Math.random()
       </code>
-      <hr />
+            </td>
+            <td>
       <div class="chart" id="chart03"> </div>
       <code>
 Math.random() * Math.random()
       </code>
+            </td>
+          </tr>
+        </table>
     </div>
 
         <!--[if lt IE 7]>
