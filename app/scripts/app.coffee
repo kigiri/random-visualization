@@ -1,6 +1,5 @@
-#
-# Visualize random data on a canvas element
-#
+$ ->
+  gui = new dat.GUI()
 
 $ ->
 
