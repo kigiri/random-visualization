@@ -14,6 +14,7 @@
 
         
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/bootstrap.css">
         <script src="scripts/vendor/jquery.min.js"></script>
         <script src="scripts/vendor/modernizr.min.js"></script>
         <script src="scripts/vendor/raphael-min.js"></script>
@@ -26,39 +27,76 @@
         <!-- endbuild -->
     </head>
     <body>
-      <h1>Visualization of <code>Math.random()</code> uses</h1>
+      <h1>Visualization of Math.random() uses</h1>
       <p>
       Manipulating random numbers with other random numbers is not a good idea because their distribution will no longer be uniform.
+      </p>
+      <p>
+      Change the iteration values with the controls on the top right. Click render to rerender the chart.
       </p>
       <div class="" style="margin-top:50px; width: 100%">
         <!-- yes, a TABLE element, sue me -->
         <table width="100%">
           <tr>
-            <td>
+            <td>Chart 01</td>
+            <td>Chart 02</td>
+            <td>Chart 03</td>
+            <td>Chart 04</td>
+          </tr>
+          <tr>
+            <td width="25%">
       <div class="chart" id="chart01"> </div>
       <code>
 Math.random()
       </code>
             </td>
-            <td>
+            <td width="25%">
       <div class="chart" id="chart02"> </div>
       <code>
 Math.random() + Math.random()
       </code>
             </td>
-            <td>
+            <td width="25%">
       <div class="chart" id="chart03"> </div>
+      <code>
+        Math.random() + Math.random() + <br />Math.random() + Math.random()
+      </code>
+            </td>
+            <td width="25%">
+      <div class="chart" id="chart04"> </div>
       <code>
 Math.random() * Math.random()
       </code>
             </td>
           </tr>
         </table>
-    </div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          Back to <a href="/">main page</a>.
+        </div>
+      </div>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-287329-16']);
+  _gaq.push(['_setDomainName', 'michielkalkman.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </body>
 </html>
