@@ -29,16 +29,16 @@ class Chart
 $ ->
 
   rand = ->
-    Math.floor Math.random() * 100
+    Math.round Math.random() * 100
 
   rand2 = ->
-    Math.floor (rand() + rand()) / 2
+    Math.round (rand() + rand()) / 2
 
   rand3 = ->
-    Math.floor (rand() + rand() + rand() + rand()) / 4
+    Math.round (rand() + rand() + rand() + rand()) / 4
 
   rand4 = ->
-    Math.floor (rand() * rand()) / 100
+    Math.round (rand() * rand()) / 100
 
 
   chart1 = new Chart rand, 'chart01'
