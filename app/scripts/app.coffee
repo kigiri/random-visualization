@@ -51,10 +51,11 @@ $ ->
   gui = new dat.GUI()
 
   for chart in charts
-    folder = gui.addFolder "Chart #{chart.domId}"
-    folder.add(chart, 'iterations')
-      .min(seriesLength)
-      .max(seriesLength * 10000)
-      .step(seriesLength)
-    folder.add(chart, 'render')
+    do (chart)->
+      folder = gui.addFolder "Chart #{chart.domId}"
+      folder.add(chart, 'iterations')
+        .min(seriesLength)
+        .max(seriesLength * 10000)
+        .step(seriesLength)
+      folder.add(chart, 'render')
 
