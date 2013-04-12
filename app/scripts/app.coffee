@@ -29,7 +29,7 @@ class Chart
 $ ->
 
   rand = ->
-    Math.round Math.random() * 100
+    Math.floor Math.random() * 100
 
   rand2 = ->
     Math.round (rand() + rand()) / 2
