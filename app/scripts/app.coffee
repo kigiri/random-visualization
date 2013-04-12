@@ -56,11 +56,11 @@ $ ->
   f2.add(chart2, 'iterations').min(100).max(1000000).step(100)
   f2.add(chart2, 'render')
 
-  f3 = gui.addFolder 'Chart 03 / rand() + rand()'
+  f3 = gui.addFolder 'Chart 03 / rand() + rand() + rand() + rand()'
   f3.add(chart3, 'iterations').min(100).max(1000000).step(100)
   f3.add(chart3, 'render')
 
-  f4 = gui.addFolder 'Chart 04 / rand() + rand()'
+  f4 = gui.addFolder 'Chart 04 / rand() * rand()'
   f4.add(chart4, 'iterations').min(100).max(1000000).step(100)
   f4.add(chart4, 'render')
 
