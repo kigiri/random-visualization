@@ -1,8 +1,10 @@
+seriesLength = 5
+
 class Chart
 
   chartWidth  : 300
   chartHeight : 300
-  length      : 100
+  length      : seriesLength
   iterations  : 100000
   paper       : null
   element     : null
@@ -29,7 +31,7 @@ class Chart
 $ ->
 
   rand = ->
-    Math.floor Math.random() * 100
+    Math.floor Math.random() * seriesLength
 
   rand2 = ->
     Math.round (rand() + rand()) / 2
@@ -38,7 +40,7 @@ $ ->
     Math.round (rand() + rand() + rand() + rand()) / 4
 
   rand4 = ->
-    Math.round (rand() * rand()) / 100
+    Math.round (rand() * rand()) / seriesLength
 
 
   chart1 = new Chart rand, 'chart01'
@@ -49,18 +51,30 @@ $ ->
   gui = new dat.GUI()
 
   f1 = gui.addFolder 'Chart 01 / rand()'
-  f1.add(chart1, 'iterations').min(100).max(1000000).step(100)
+  f1.add(chart1, 'iterations')
+    .min(seriesLength)
+    .max(seriesLength * 10000)
+    .step(seriesLength)
   f1.add(chart1, 'render')
 
   f2 = gui.addFolder 'Chart 02 / rand() + rand()'
-  f2.add(chart2, 'iterations').min(100).max(1000000).step(100)
+  f2.add(chart2, 'iterations')
+    .min(seriesLength)
+    .max(seriesLength * 10000)
+    .step(seriesLength)
   f2.add(chart2, 'render')
 
   f3 = gui.addFolder 'Chart 03 / rand() + rand() + rand() + rand()'
-  f3.add(chart3, 'iterations').min(100).max(1000000).step(100)
+  f3.add(chart3, 'iterations')
+    .min(seriesLength)
+    .max(seriesLength * 10000)
+    .step(seriesLength)
   f3.add(chart3, 'render')
 
   f4 = gui.addFolder 'Chart 04 / rand() * rand()'
-  f4.add(chart4, 'iterations').min(100).max(1000000).step(100)
+  f4.add(chart4, 'iterations')
+    .min(seriesLength)
+    .max(seriesLength * 10000)
+    .step(seriesLength)
   f4.add(chart4, 'render')
 
