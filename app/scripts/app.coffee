@@ -14,8 +14,7 @@ class Chart
     @render()
 
   render : ->
-    if @element?
-      @element.remove()
+    @element.remove if @element?
 
     @element = @paper.barchart 0, 0, @chartHeight, @chartWidth,
       [@rgen()]
@@ -37,7 +36,7 @@ $ ->
     Math.round (rand() + rand()) / 2
 
   rand3 = ->
-    Math.round (rand() + rand() + rand() + rand()) / 4
+    Math.round (rand2() + rand2()) / 2
 
   rand4 = ->
     Math.round (rand() * rand()) / seriesLength
