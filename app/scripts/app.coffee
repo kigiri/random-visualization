@@ -1,4 +1,4 @@
-seriesLength = 5
+seriesLength = 100
 
 class Chart
 
