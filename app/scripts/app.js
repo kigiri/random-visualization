@@ -50,9 +50,7 @@ $(function() {
   rand = function() {
     return Math.floor(Math.random() * seriesLength);
   };
-  rand2 = function() {
-    return Math.round((rand() + rand()) / 2);
-  };
+  rand2 = (s => () => s = (s * Math.PI + 0.534) % 1)(424242)
   rand3 = function() {
     return Math.round((rand2() + rand2()) / 2);
   };
