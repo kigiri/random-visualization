@@ -52,7 +52,7 @@ $(function() {
   };
   rand2 = (s => () => Math.floor((s = (s * Math.PI + 0.534) % 1) * seriesLength))(424242)
   rand3 = (s => () => Math.floor((s = (s * (22 / 3.3) + 0.534) % 1) * seriesLength))(424242)
-  rand4 = (s => () => Math.floor((s = (s * (22 / 3.3 * 323) + 0.534) % 1) * seriesLength))(424242)
+  rand4 = (s => () => Math.floor((s = (s * 2153.333 + 0.534) % 1) * seriesLength))(424242)
   charts = [new Chart(rand, 'chart01'), new Chart(rand2, 'chart02'), new Chart(rand3, 'chart03'), new Chart(rand4, 'chart04')];
   gui = new dat.GUI();
   results = [];
